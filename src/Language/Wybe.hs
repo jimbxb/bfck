@@ -42,7 +42,7 @@ transpile _ program = do
     , ""
     , "?t = tape([], '\\0', [])"
     , ""
-    ]++
+    ] ++
     concatMap (map (uncurry indent) . go 0) program
   where
     indent i s = replicate (4 * i) ' ' ++ s

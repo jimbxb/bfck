@@ -21,7 +21,7 @@ run = (`evalStateT` initCells Nothing) . go
     go (Right':rest) = modify moveRight `cont` rest
     go (Input:rest) = (modify . setCurrent . ord =<< liftIO getChar) `cont` rest
     go (Output:rest) =
-      (liftIO . putStr . (:[]) . chr . fix =<< gets current) `cont` rest
+      (liftIO . putStr . (: []) . chr . fix =<< gets current) `cont` rest
     go loop@(Loop body:rest) = do
       gets (fix . current) >>=
         (\case
