@@ -1,0 +1,75 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           bfck
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/bfck#readme>
+homepage:       https://github.com/jimbxb/bfck#readme
+bug-reports:    https://github.com/jimbxb/bfck/issues
+author:         James Barnes
+maintainer:     jamesbarnes2505@gmail.com
+copyright:      2022 Jams Barnes
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/jimbxb/bfck
+
+library
+  exposed-modules:
+      BrainFuck
+      Language.C
+      Language.Haskell
+      Language.Language
+      Language.Python
+      Language.Wybe
+      Parse
+      Run
+  other-modules:
+      Paths_bfck
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      array >=0.5.4.0
+    , base >=4.7 && <5
+    , transformers >=0.5.6.2
+  default-language: Haskell2010
+
+executable bfck
+  main-is: Main.hs
+  other-modules:
+      Options
+      Paths_bfck
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      array >=0.5.4.0
+    , base >=4.7 && <5
+    , bfck
+    , transformers >=0.5.6.2
+  default-language: Haskell2010
+
+test-suite bfck-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_bfck
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array >=0.5.4.0
+    , base >=4.7 && <5
+    , bfck
+    , transformers >=0.5.6.2
+  default-language: Haskell2010
