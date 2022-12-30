@@ -22,7 +22,7 @@ transpile size program = do
     go i Decr = [(i, "array[idx] -= 1")]
     go i Left' = [(i, "idx -= 1")]
     go i Right' = [(i, "idx += 1")]
-    go i Input = [(i, "sys.stdin.read(1)")]
+    go i Input = [(i, "array[idx] = sys.stdin.read(1)")]
     go i Output =
       [(i, "print(chr(((array[idx] % 256) + 256) % 256), end=\"\")")]
     go i (Loop loop) =
