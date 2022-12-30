@@ -35,7 +35,7 @@ transpile _ program = do
     , "        X = X0"
     , "    )."
     , ""
-    , "input(state(Ls, X, Rs), state(Ls, _, Rs)) :-"
+    , "input(state(Ls, X, Rs), state(Ls, X, Rs)) :-"
     , "    put_char(X)."
     , ""
     , "main(_) :-"
