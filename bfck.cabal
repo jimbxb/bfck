@@ -11,7 +11,7 @@ homepage:       https://github.com/jimbxb/bfck#readme
 bug-reports:    https://github.com/jimbxb/bfck/issues
 author:         James Barnes
 maintainer:     jamesbarnes2505@gmail.com
-copyright:      2022 Jams Barnes
+copyright:      2022 James Barnes
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -29,6 +29,7 @@ library
       Language.C
       Language.Haskell
       Language.Language
+      Language.Prolog
       Language.Python
       Language.Wybe
       Parse
