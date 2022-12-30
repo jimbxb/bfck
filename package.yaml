@@ -4,7 +4,7 @@ github:              "jimbxb/bfck"
 license:             BSD3
 author:              "James Barnes"
 maintainer:          "jamesbarnes2505@gmail.com"
-copyright:           "2022 Jams Barnes"
+copyright:           "2022 James Barnes"
 
 extra-source-files:
 - README.md
